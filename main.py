@@ -19,10 +19,10 @@ printable.replace(" ", '')
 
 MIN = 0
 MAX = len(printable) - 1
-API_TOKEN = '5453956794:AAFQPAK73FPJHLZwECl32RzzEG6csJ1y9rA'
+API_TOKEN = '545'
 
 
-bot = Bot(token='5453956794:AAFQPAK73FPJHLZwECl32RzzEG6csJ1y9rA')
+bot = Bot(token='545')
 dp = Dispatcher(bot, storage=MemoryStorage())
 db = Database()
 
