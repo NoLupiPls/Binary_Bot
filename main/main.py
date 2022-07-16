@@ -260,13 +260,27 @@ async def pip_lol(message: types.Message, state: FSMContext):
     await message.answer('Вот твой код:\n' + bad)
     
         
-    executor.return_polling(dp)
-        
         
 @dp.message_handler()
-async def same_reply(message):
-    db.insert_user(message["from"]["id"], message["from"]["first_name"])
-    await message.reply(f"Хэй, {message['from']['username']}, я не знаю о чём ты говоришь😅")
+async def same_reply(message: types.Message):
+    if message.text == '/bin':
+        async with state.proxy() as data:
+
+        data['text'] = message.text
+
+        user_message = str(data['text'])  
+        res = ''.join(format(ord(i), ' b') for i in user_message)
+
+        #key = b'key'
+
+        #xor(user_message.encode(), key)   
+        bad = res
+
+        await message.answer('Вот твой код:\n' + bad)
+     else:
+        db.insert_user(message["from"]["id"], message["from"]["first_name"])
+        await message.reply(f"Хэй, {message['from']['username']}, я не знаю о чём ты говоришь😅")
+    
 
 
 def generate(length):
