@@ -7,5 +7,5 @@ This bot will help you create really **SECURE** passwords and passphrases from _
 ## Contributor
 - [NoLupiPls](https://github.com/NoLupiPls) - _Ilya_
 
-#See the current bot at the link
+# See the current bot at the link
 - [Binary Bot - **Check**](https://t.me/BinaryNL_bot)
